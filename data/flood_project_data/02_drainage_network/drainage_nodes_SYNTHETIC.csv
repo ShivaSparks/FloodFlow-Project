@@ -1,0 +1,41 @@
+node_id,node_type,ward,lat,lon,ground_level_m,invert_level_m,manhole_depth_m,notes
+N001,manhole,177,12.9770,80.2205,6.10,4.30,1.80,Velachery main road junction - representative node
+N002,manhole,177,12.9755,80.2192,5.95,4.15,1.80,Near Velachery lake bund
+N003,manhole,177,12.9741,80.2180,5.80,3.90,1.90,Taramani link road
+N004,inlet,177,12.9760,80.2210,6.05,4.40,1.65,Roadside inlet - 100 Feet Road
+N005,manhole,178,12.9700,80.2150,5.60,3.70,1.90,Velachery-Tambaram main road
+N006,manhole,178,12.9680,80.2130,5.50,3.55,1.95,Junction near MRTS station
+N007,inlet,178,12.9690,80.2160,5.65,3.85,1.80,Roadside inlet
+N008,manhole,179,12.9620,80.2100,5.30,3.30,2.00,Pallikaranai marsh boundary node
+N009,manhole,179,12.9580,80.2080,5.10,3.05,2.05,200 Feet Radial Road junction
+N010,inlet,179,12.9600,80.2090,5.20,3.40,1.80,Roadside inlet near marsh
+N011,manhole,179,12.9540,80.2050,4.95,2.85,2.10,Near Narayanapuram lake outfall
+N012,outfall,179,12.9500,80.2020,4.60,2.40,2.20,Outfall into Pallikaranai marsh
+N013,manhole,191,12.9350,80.2020,5.40,3.35,2.05,Pallikaranai Ambedkar Nagar
+N014,manhole,190,12.9300,80.1980,5.25,3.10,2.15,Pallikaranai-Medavakkam link road
+N015,manhole,189,12.9200,80.1990,5.05,2.95,2.10,Medavakkam Periya Eri approach
+N016,manhole,189,12.9180,80.2000,4.90,2.75,2.15,Vadakkupattu junction
+N017,outfall,189,12.9150,80.2020,4.50,2.30,2.20,Outfall near Medavakkam lake
+N018,manhole,190,12.9250,80.1960,5.15,3.00,2.15,Nanmangalam link
+N019,inlet,191,12.9330,80.2010,5.35,3.45,1.90,Roadside inlet Pallikaranai
+N020,manhole,178,12.9660,80.2140,5.55,3.60,1.95,Velachery-Pallikaranai link road
+
+# ---------------------------------------------------------------------------
+# THIS FILE IS SYNTHETIC / ILLUSTRATIVE, NOT SURVEYED DATA.
+# It follows the exact schema and approximate value ranges reported in the
+# peer-reviewed study that surveyed the real network in this belt:
+#   "Performance of urban storm drainage network under changing climate
+#    scenarios: Flood mitigation in Indian coastal city" (Nature Scientific
+#    Reports, 2019) - https://www.nature.com/articles/s41598-019-43859-3
+# That paper describes a DGPS survey of 319 real nodes across wards 177,
+# 178 and 179 (Velachery), with invert levels and node coordinates, used to
+# build a SWMM model. The 20 rows above are placeholders in the same value
+# range (ground level ~5-6m, invert level ~2.5-4.5m below, consistent with
+# the marsh catchment's ~5m average altitude) so you can start coding your
+# graph loader, risk-scoring logic, and dashboard immediately.
+#
+# TO GET REAL DATA: request the underlying 319-point DGPS dataset / SWMM
+# .inp file from the paper's corresponding author, or from Greater Chennai
+# Corporation (which supplied the base survey), or digitize it yourself
+# from GCC's published ward-wise SWD maps (see 05_roads_boundaries/).
+# ---------------------------------------------------------------------------

@@ -1,0 +1,6 @@
+zone_id,landcover_class,runoff_coefficient,description
+urban_dense,built_up,0.90,dense buildings and paved surfaces
+urban_mixed,built_up_mixed,0.75,mixed residential streets and open plots
+wetland,wetland,0.35,marsh or open wet area
+water,open_water,0.05,lakes and permanent water bodies
+green,vegetation,0.25,parks and vegetated areas

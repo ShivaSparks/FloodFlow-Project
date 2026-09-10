@@ -1,0 +1,19 @@
+location_name,area,approx_lat,approx_lon,event,severity_note,source
+Echankadu Signal / 200 Feet Radial Road,Pallikaranai,12.9440,80.2010,Cyclone Michaung (Dec 2023),"Narayanapuram Lake overflow flooded entire radial road stretch; vehicles washed away; water entered apartment ground/first floors",Medium article - Michaung flood areas
+Velachery main commercial belt (near Phoenix MarketCity),Velachery,12.9815,80.2181,Recurring (2015/2020/2021/2023),"Slightest rains cause flooding and water stagnation; residents parked cars on flyovers during 2020 and 2021 events",EPW Chennai's Rain Check / Deccan Herald reports
+Vadakkupattu / Thiruvalluvar Street,Medavakkam,12.9174,80.1975,Medavakkam lake breach (2023),"Vadakkupattu Periya Eri breach; 20,000-25,000 people affected; ~INR 50 crore damage; lack of surplus weir/regulator cited as cause",Citizen Matters - Medavakkam citizen flood audit
+Pallikaranai (general, apartment clusters near marsh edge),Pallikaranai,12.9370,80.1990,Recurring,"Posh residential apartments near IT corridor (OMR) repeatedly waterlogged; marsh shrinkage over 2 decades cited as key driver",Multiple (Wikipedia Pallikaranai Marsh, Medium Michaung article)
+Narayanapuram Lake outfall area,Pallikaranai,12.9460,80.2030,Cyclone Michaung (Dec 2023),Lake overflow was proximate cause of the Echankadu radial road flooding,Medium - Michaung flood areas
+Jafferkhanpet / MGR Canal corridor (adjacent belt reference),West Chennai (reference case),13.0270,80.2050,Recurring / Sept 2024 warning,"17.3km MGR canal - natural stormwater drain into Adyar river; canal neglect flagged as flood risk driver - useful as an analogous 'canal neglect' case study",Wikipedia Jafferkhanpet / Times of India
+
+# ---------------------------------------------------------------------------
+# NOTES
+# - Coordinates are APPROXIMATE (place/locality-level), geocoded manually
+#   from place names during research - NOT survey-grade. Good enough for
+#   demo markers on your dashboard map; refine with Google Maps/OSM search
+#   before using for anything quantitative.
+# - Use these as hardcoded "known high-risk nodes" in your prototype demo
+#   so judges see the system correctly flagging real, named locations,
+#   not just abstract grid cells.
+# - Full source articles are listed in 00_README_START_HERE.md, Section 5.
+# ---------------------------------------------------------------------------

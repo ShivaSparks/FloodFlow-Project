@@ -1,0 +1,12 @@
+{
+  "type": "FeatureCollection",
+  "name": "synthetic_roads_prototype",
+  "features": [
+    {"type":"Feature","properties":{"road_id":"SR001","name":"Synthetic Main Road","road_class":"primary","speed_kph":40},"geometry":{"type":"LineString","coordinates":[[80.1805,12.905],[80.1890,12.915],[80.1980,12.925],[80.2070,12.935]]}},
+    {"type":"Feature","properties":{"road_id":"SR002","name":"Synthetic Lake Road","road_class":"secondary","speed_kph":30},"geometry":{"type":"LineString","coordinates":[[80.1870,12.900],[80.1900,12.912],[80.1930,12.925],[80.1960,12.940]]}},
+    {"type":"Feature","properties":{"road_id":"SR003","name":"Synthetic East Link","road_class":"secondary","speed_kph":35},"geometry":{"type":"LineString","coordinates":[[80.1960,12.940],[80.2070,12.942],[80.2180,12.944],[80.2320,12.946]]}},
+    {"type":"Feature","properties":{"road_id":"SR004","name":"Synthetic Marsh Edge Road","road_class":"tertiary","speed_kph":25},"geometry":{"type":"LineString","coordinates":[[80.1930,12.925],[80.2040,12.930],[80.2160,12.935],[80.2280,12.940]]}},
+    {"type":"Feature","properties":{"road_id":"SR005","name":"Synthetic North Connector","road_class":"secondary","speed_kph":35},"geometry":{"type":"LineString","coordinates":[[80.1870,12.960],[80.1980,12.955],[80.2100,12.950],[80.2220,12.946]]}},
+    {"type":"Feature","properties":{"road_id":"SR006","name":"Synthetic Safe Detour","road_class":"primary","speed_kph":45},"geometry":{"type":"LineString","coordinates":[[80.1805,12.970],[80.1930,12.968],[80.2070,12.962],[80.2220,12.955]]}}
+  ]
+}

@@ -1,0 +1,33 @@
+edge_id,from_node,to_node,pipe_type,diameter_or_width_m,length_m,slope_percent,material,condition,design_capacity_cumecs
+E001,N004,N001,circular_pipe,0.9,120,0.15,RCC,fair,0.85
+E002,N001,N002,circular_pipe,1.0,150,0.12,RCC,fair,1.05
+E003,N002,N003,circular_pipe,1.0,180,0.10,RCC,poor,0.95
+E004,N007,N005,circular_pipe,0.9,110,0.14,RCC,fair,0.80
+E005,N005,N006,box_drain,1.2,200,0.08,concrete,poor,1.30
+E006,N006,N020,box_drain,1.2,160,0.09,concrete,fair,1.35
+E007,N020,N008,box_drain,1.5,220,0.07,concrete,poor,1.90
+E008,N010,N009,circular_pipe,0.9,130,0.13,RCC,fair,0.82
+E009,N009,N008,circular_pipe,1.1,170,0.10,RCC,poor,1.10
+E010,N008,N011,open_canal,2.0,300,0.05,earthen/lined,poor,2.50
+E011,N011,N012,open_canal,2.5,250,0.04,lined,fair,3.10
+E012,N019,N013,circular_pipe,0.9,140,0.12,RCC,fair,0.80
+E013,N013,N014,box_drain,1.3,210,0.08,concrete,poor,1.40
+E014,N014,N018,box_drain,1.2,190,0.09,concrete,fair,1.30
+E015,N018,N015,box_drain,1.3,200,0.08,concrete,poor,1.35
+E016,N015,N016,open_canal,1.8,180,0.06,earthen,poor,2.00
+E017,N016,N017,open_canal,2.2,160,0.05,lined,fair,2.80
+E018,N012,N013,open_canal,2.0,400,0.03,earthen,poor,2.30
+
+# ---------------------------------------------------------------------------
+# SYNTHETIC / ILLUSTRATIVE - see drainage_nodes_SYNTHETIC.csv header for
+# full context and how to replace this with real surveyed data.
+#
+# Schema rationale (for your FastAPI/graph model layer):
+#   - from_node / to_node -> directed graph edges (manholes/inlets as nodes)
+#   - design_capacity_cumecs -> use this vs. incoming computed runoff to
+#     flag surcharge/overcapacity (your "hydraulic capacity" check)
+#   - condition (poor/fair/good) -> multiply design_capacity by a derating
+#     factor for "poor" pipes to simulate siltation/blockage, matching the
+#     real-world finding that Chennai's added-area drains are often under-
+#     capacity or poorly maintained (see README.md, Section 3).
+# ---------------------------------------------------------------------------

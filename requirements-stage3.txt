@@ -1,0 +1,7 @@
+# Stage 3: flood model and rolling simulator
+
+networkx>=3.3,<4
+scipy>=1.13,<2
+
+# Useful for structured timestep/raster analysis
+xarray>=2024.6,<2026

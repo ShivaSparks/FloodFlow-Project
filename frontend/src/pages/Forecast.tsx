@@ -1,0 +1,9 @@
+import { useEffect } from "react";
+import { Activity, CloudRain, Droplets } from "lucide-react";
+import { useFloodStore } from "../store/useFloodStore";
+
+export default function Forecast() {
+  const { steps, loadTimeline, loading } = useFloodStore();
+  useEffect(() => { if (!steps.length) void loadTimeline(); }, [loadTimeline, steps.length]);
+  return <section className="dashboard-page simple-page"><div className="page-heading"><div><p className="eyebrow">Prediction Timeline</p><h1>Flood Forecast</h1><p className="muted">Predicted flood conditions over the next 3 hours.</p></div><button className="outline-button" onClick={() => void loadTimeline()}>{loading ? "Loading…" : "Refresh data"}</button></div><div className="data-grid">{steps.map((step) => { const peak = Math.max(...step.predictions.map((p) => p.predicted_depth_cm), 0); const stress = Math.max(...step.predictions.map((p) => p.drainage_utilization), 0); const blocked = step.predictions.filter((p) => (p.final_risk_level ?? p.risk_level) === "blocked").length; return <article className="data-card" key={step.simulation_time_minutes}><div className="data-card-head"><strong>{step.simulation_time_minutes === 0 ? "Now" : `+${step.simulation_time_minutes} min`}</strong><span className={`risk-pill ${blocked ? "blocked" : "safe"}`}>Blocked roads: {blocked}</span></div><div className="metric-row"><span><CloudRain size={15} />Rainfall: {step.rainfall_mm_15min?.toFixed(1)} mm</span><span><CloudRain size={15} />Cumulative: {(step.cumulative_rainfall_mm ?? 0).toFixed(1)} mm</span><span><Droplets size={15} />Peak depth: {peak.toFixed(1)} cm</span></div><div className="metric-row"><span><Activity size={15} />Drainage load: {stress.toFixed(2)}×</span></div><div className="depth-bar"><i style={{ width: `${Math.min(100, peak / 2)}%` }} /></div><small>Simulated forecast</small></article>; })}</div></section>;
+}
